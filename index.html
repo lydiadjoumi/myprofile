@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lydia | Ingénieure Systèmes & Réseaux</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lydia Djoumi | Ingénieure Systèmes & Réseaux</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f2f2f2, #dce3ea);
-      color: #1e1e1e;
-      height: 100vh;
+      background: linear-gradient(135deg, #0d1117, #1c1f26);
+      color: #f0f6fc;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
+      min-height: 100vh;
       padding: 2rem;
     }
 
     h1 {
-      font-size: 2.8rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #58a6ff, #d2a8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInDown 1s ease-out;
     }
 
-    .animated-text {
+    .subtitle {
       font-size: 1.5rem;
-      color: #555;
-      height: 2rem;
-      margin-bottom: 2rem;
+      margin: 1rem 0 2rem;
+      animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 3px solid rgba(0, 0, 0, 0.75);
-      animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+      border-right: 3px solid #58a6ff;
+    }
+
+    .skills {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .skill {
+      background: rgba(88, 166, 255, 0.1);
+      border: 1px solid #58a6ff33;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #58a6ff, #d2a8ff);
+      color: #0d1117;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #58a6ff;
     }
 
     @keyframes typing {
@@ -47,50 +87,43 @@
       to { width: 100% }
     }
 
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: rgba(0, 0, 0, 0.75); }
+    @keyframes blink {
+      50% { border-color: transparent }
     }
 
-    .buttons {
-      display: flex;
-      gap: 1.5rem;
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .btn {
-      background: linear-gradient(to right, #4b6cb7, #182848);
-      color: white;
-      padding: 0.9rem 1.8rem;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
       }
-      .animated-text {
+      .subtitle {
         font-size: 1.2rem;
       }
       .btn {
-        padding: 0.8rem 1.5rem;
+        padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Lydia — Ingénieure Systèmes & Réseaux</h1>
-  <div class="animated-text">Et si on construisait quelque chose de solide, ensemble ?</div>
+  <h1>Lydia Djoumi</h1>
+  <div class="subtitle">Et si on construisait quelque chose de solide, ensemble ?</div>
+  <div class="skills">
+    <div class="skill">Systèmes</div>
+    <div class="skill">Réseaux</div>
+    <div class="skill">DevOps</div>
+    <div class="skill">Cybersécurité</div>
+  </div>
   <div class="buttons">
     <a href="https://www.linkedin.com/in/lydia-djoumi/" class="btn" target="_blank">LinkedIn</a>
     <a href="CV_Lydia_DJOUMI_AdminSystèmes&Réseaux.pdf" class="btn" download>Télécharger le CV</a>
